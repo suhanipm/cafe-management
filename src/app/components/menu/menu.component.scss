@@ -1,0 +1,103 @@
+.menu-container {
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #3e2723;
+    }
+  
+    .category-filter {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+  
+      button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: #d7ccc8;
+        cursor: pointer;
+        font-weight: 600;
+  
+        &.active {
+          background-color: #6d4c41;
+          color: white;
+        }
+  
+        &:hover {
+          background-color: #a1887f;
+          color: white;
+        }
+      }
+    }
+  
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 2rem;
+  
+      .menu-card {
+        background: #fdfdfd;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        padding: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+  
+        img {
+          width: 100%;
+          height: 160px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin-bottom: 1rem;
+        }
+  
+        h3 {
+          margin: 0.5rem 0;
+          color: #4e342e;
+        }
+  
+        .desc {
+          font-size: 0.9rem;
+          text-align: center;
+          color: #616161;
+        }
+  
+        .price {
+          font-weight: bold;
+          margin: 0.5rem 0;
+        }
+  
+        .tags {
+          font-size: 0.8rem;
+          margin-bottom: 0.7rem;
+          span {
+            background: #ffe0b2;
+            padding: 2px 8px;
+            margin: 0 4px;
+            border-radius: 5px;
+          }
+        }
+  
+        button {
+          padding: 8px 16px;
+          border: none;
+          border-radius: 6px;
+          background-color: #6d4c41;
+          color: white;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #4e342e;
+          }
+        }
+      }
+    }
+  }
+  

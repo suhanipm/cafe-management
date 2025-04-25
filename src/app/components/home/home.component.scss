@@ -1,54 +1,126 @@
 .home-container {
-    padding: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    max-width: 900px;
-    margin: auto;
-  }
-  
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+
   .hero {
-    text-align: center;
-    background-color: #ffe7ba;
-    padding: 40px 20px;
-    border-radius: 12px;
-    margin-bottom: 30px;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    color: #4e342e;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin: 10px 0 20px;
-  }
-  
-  .cta-button {
-    background-color: #6d4c41;
+    background: url('/assets/hero.jpg') center/cover no-repeat;
     color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    text-align: center;
+    padding: 6rem 1rem;
+
+    .hero-content {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 2rem;
+      border-radius: 12px;
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      button {
+        background-color: #ff6b6b;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #e04848;
+        }
+      }
+    }
   }
-  
-  .cta-button:hover {
-    background-color: #5d4037;
+
+  .featured {
+    padding: 3rem 1rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .featured-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+
+      .item {
+        width: 260px;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+        }
+
+        h3 {
+          margin: 0.8rem 0 0.3rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
   }
-  
-  .secondary {
-    background-color: #4caf50;
+
+  .pay-forward {
+    background-color: #fef6f6;
+    padding: 3rem 1rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #3f9444;
+      }
+    }
   }
-  
-  .secondary:hover {
-    background-color: #388e3c;
+
+  .about {
+    padding: 3rem 1rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
   }
-  
-  .about, .wallet-feature, .gallery-preview {
-    margin-bottom: 40px;
-  }
-  
-  h2 {
-    color: #3e2723;
-  }
-  
+}

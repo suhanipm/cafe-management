@@ -1,0 +1,92 @@
+.orders-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', sans-serif;
+  
+    h1, h2 {
+      color: #3e2723;
+    }
+  
+    .order-form {
+      margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  
+      .form-group {
+        display: flex;
+        flex-direction: column;
+  
+        input, textarea {
+          padding: 10px;
+          font-size: 1rem;
+          border: 1px solid #ccc;
+          border-radius: 6px;
+        }
+      }
+  
+      button {
+        width: fit-content;
+        padding: 10px 20px;
+        background-color: #6d4c41;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+  
+        &:hover {
+          background-color: #4e342e;
+        }
+  
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+  
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+      }
+  
+      th {
+        background-color: #ffe0b2;
+      }
+  
+      td button {
+        padding: 6px 12px;
+        margin: 0 4px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+  
+        &:first-child {
+          background-color: #4caf50;
+          color: white;
+        }
+  
+        &:last-child {
+          background-color: #f44336;
+          color: white;
+        }
+      }
+  
+      .pending {
+        color: orange;
+      }
+  
+      .completed {
+        color: green;
+        font-weight: bold;
+      }
+    }
+  }
+  

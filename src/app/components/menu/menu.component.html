@@ -1,0 +1,31 @@
+<div class="menu-container">
+    <h1>🍽 Cafe Menu</h1>
+  
+    <!-- Category Filter -->
+    <div class="category-filter">
+      <button *ngFor="let category of categories" (click)="filterCategory(category)" [class.active]="selectedCategory === category">
+        {{ category }}
+      </button>
+    </div>
+  
+    <!-- Menu Grid -->
+    <div class="menu-grid">
+      <div class="menu-card" *ngFor="let item of filteredMenu">
+        <img [src]="item.image" alt="{{ item.name }}" />
+        <h3>{{ item.name }}</h3>
+        <p class="desc">{{ item.description }}</p>
+        <p class="price">₹{{ item.price }}</p>
+  
+        <!-- Optional tags -->
+        <div class="tags">
+          <span *ngIf="item.isPopular">⭐ Popular</span>
+          <span *ngIf="item.isSpicy">🌶 Spicy</span>
+          <span *ngIf="item.isVegan">🥦 Vegan</span>
+          <span *ngIf="item.canBeDonated">🫶 Eligible for Donation</span>
+        </div>
+  
+        <button (click)="addToOrder(item)">Add to Order</button>
+      </div>
+    </div>
+  </div>
+  

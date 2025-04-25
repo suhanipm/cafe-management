@@ -1,0 +1,93 @@
+$primary-color: #4caf50;
+$primary-hover: #388e3c;
+$text-color: #3e2723;
+$border-radius: 10px;
+
+.wallet-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+
+  h1, h2 {
+    color: $text-color;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 0.3rem;
+        font-weight: 600;
+      }
+
+      input {
+        padding: 8px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: $primary-color;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: $border-radius;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $primary-hover;
+      }
+
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  .wallet-items {
+    margin-top: 2rem;
+
+    .item-card {
+      border: 1px solid #ddd;
+      border-radius: $border-radius;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background-color: #f7f7f7;
+
+      p {
+        margin: 0.4rem 0;
+
+        span.redeemed {
+          color: red;
+          font-weight: bold;
+        }
+      }
+
+      button {
+        margin-top: 0.5rem;
+        background-color: #6d4c41;
+
+        &:hover {
+          background-color: #5d4037;
+        }
+
+        &:disabled {
+          background-color: #aaa;
+        }
+      }
+    }
+  }
+}

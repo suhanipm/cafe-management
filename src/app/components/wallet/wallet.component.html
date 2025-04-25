@@ -1,0 +1,44 @@
+<div class="wallet-container">
+    <h1>Pay-it-Forward Wallet 💙</h1>
+  
+    <!-- Donate Form -->
+    <form (ngSubmit)="addWalletItem()" #walletForm="ngForm">
+      <div class="form-group">
+        <label for="donorName">Donor Name:</label>
+        <input type="text" id="donorName" [(ngModel)]="newItem.donorName" name="donorName" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="itemName">Item:</label>
+        <input type="text" id="itemName" [(ngModel)]="newItem.itemName" name="itemName" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" [(ngModel)]="newItem.quantity" name="quantity" min="1" required />
+      </div>
+  
+      <button type="submit" [disabled]="!walletForm.form.valid">Donate</button>
+    </form>
+  
+    <!-- Wallet Items List -->
+    <div class="wallet-items" *ngIf="walletItems.length > 0">
+      <h2>Available Items</h2>
+      <div class="item-card" *ngFor="let item of walletItems">
+        <p><strong>Item:</strong> {{ item.itemName }}</p>
+        <p><strong>From:</strong> {{ item.donorName }}</p>
+        <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+        <p><strong>Status:</strong> 
+          <span [ngClass]="{ redeemed: item.redeemed }">
+            {{ item.redeemed ? 'Redeemed' : 'Available' }}
+          </span>
+        </p>
+        <button (click)="redeemItem(item.id)" [disabled]="item.redeemed">Redeem</button>
+      </div>
+    </div>
+  
+    <div *ngIf="walletItems.length === 0">
+      <p>No wallet donations yet. Be the first to spread kindness! 💛</p>
+    </div>
+  </div>
+  

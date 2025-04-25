@@ -1,0 +1,12 @@
+<div class="gallery-container">
+    <h2 class="gallery-heading">Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" *ngFor="let image of galleryImages">
+        <img [src]="image.src" [alt]="image.alt" />
+        <div class="overlay">
+          <p>{{ image.caption }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
